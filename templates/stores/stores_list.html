@@ -7,10 +7,14 @@
     <title>Beginning Django</title>
 </head>
 <body>
-    <h1>Django Template</h1>
+    <h2>Stores List Template</h2>
 
     <div>
-        <a href="{% url 'stores:index' %}">View all stores</a>
+        {% if location %}
+            <h3>Location: {{ location }}</h3>
+        {% endif %}
     </div>
+
+    <a href="{% url 'homepage' %}">Back to home</a>
 </body>
 </html>
